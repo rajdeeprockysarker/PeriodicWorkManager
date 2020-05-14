@@ -62,7 +62,7 @@ class ServiceInputToDB(context: Context, workerParams: WorkerParameters) :
         const val KEY_TASK_OUTPUT = "key_task_output"
     }
 
-    fun insertValutToDB(){
+    fun insertValutToDB() {
 
 
         val db: AppDatabase = AppDatabase.getAppDatabase(applicationContext) as AppDatabase
@@ -73,10 +73,10 @@ class ServiceInputToDB(context: Context, workerParams: WorkerParameters) :
             user.firstName = "Ajaydfd"
             user.lastName = "Saini"
             user.age = 27
-            user.timestamp=Calendar.getInstance().getTime().toString()
+            user.timestamp = Calendar.getInstance().getTime().toString()
             db.userDao()?.insertAll(user)
-            Log.e("Value",db.userDao()?.countUsers().toString());
-           // db.userDao()?.all
+            Log.e("Value", db.userDao()?.countUsers().toString());
+            // db.userDao()?.all
         }
     }
 
